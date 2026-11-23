@@ -1,0 +1,15 @@
+title: Journal
+description: ""
+url: "https://viragtripathi.github.io"
+# For a project repository, set this to its name with a leading slash, e.g. /journal.
+# Keep it empty for an account's username.github.io repository.
+baseurl: "/journal"
+lang: en
+timezone: America/New_York
+markdown: kramdown
+permalink: /posts/:title/
+future: false
+kramdown:
+  smart_quotes: [apos, apos, quot, quot]
+exclude:
+  - README.txt
