@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <p class="eyebrow">Journal</p>
+    <h1>{{ page.title | escape }}</h1>
+    <div class="post-meta">
+      {% if page.author %}<span>{{ page.author | escape }}</span>{% endif %}
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time>
+    </div>
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+  {% if page.source_url %}
+  <aside class="source-note" aria-label="Referenced essay">
+    <p>Referenced essay: <a href="{{ page.source_url | escape }}">{{ page.source_title | default: page.source_url | escape }}</a></p>
+  </aside>
+  {% endif %}
+  <nav class="post-navigation" aria-label="Post navigation">
+    <a href="{{ '/' | relative_url }}">All posts</a>
+  </nav>
+</article>
