@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' | escape }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description | escape }}">{% endif %}
+    <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+      <nav aria-label="Main navigation">
+        <a href="{{ '/' | relative_url }}">Posts</a>
+      </nav>
+    </header>
+    <main id="main" class="site-main" tabindex="-1">
+      {{ content }}
+    </main>
+    <footer class="site-footer">
+      <a href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+    </footer>
+  </body>
+</html>
